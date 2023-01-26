@@ -34,13 +34,12 @@ class PlayGame
             player_turns(@turn)
             game_over = board.check_winner
             if !game_over
-                game_over = board.isFull? 
+                game_over = board.isFull?
+                if board.isFull? 
+                    puts "Draw!"
+                    return
+                end 
             end
-        end
-
-        if board.isFull?
-            puts "Draw!"
-            return
         end
 
         if @turn == 2
