@@ -38,6 +38,11 @@ class PlayGame
             end
         end
 
+        if board.isFull?
+            puts "Draw!"
+            return
+        end
+
         if @turn == 2
             puts "#{player_one.name} wins!"
         else

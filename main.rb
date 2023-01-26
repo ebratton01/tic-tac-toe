@@ -11,10 +11,11 @@ while keep_going
 
     while play_again
         puts "Do you want to play again, y or n?"
-        play_again = gets.chomp.downcase
-        if play_again == 'y'
+        input = gets.chomp.downcase
+        if input == 'y'
             keep_going = true
-        elsif  play_again == 'n'
+            break
+        elsif input == 'n'
             puts "Farewell."
             keep_going = false
             break
